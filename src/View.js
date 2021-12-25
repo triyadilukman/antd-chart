@@ -10,8 +10,6 @@ import Header from "./components/molecules/Header";
 
 import { useRDData } from "./context/fetch-context";
 
-import { colStyle } from "./styles";
-
 const View = () => {
 	const { state: rDStates, dispatch: rdDispatch } = useRDData();
 	const {
