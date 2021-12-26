@@ -2,7 +2,6 @@ import {
 	Box,
 	Flex,
 	Avatar,
-	HStack,
 	Button,
 	Menu,
 	MenuButton,
@@ -15,7 +14,12 @@ import {
 import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import { SettingOutlined, BellOutlined } from "@ant-design/icons";
 
-import { logo as logoSty, user as userSty, userMobile as userMobileSty, searchBar as searchBarSty } from "./styles";
+import {
+	logo as logoSty,
+	user as userSty,
+	userMobile as userMobileSty,
+	icon as iconSty,
+} from "./styles";
 
 const Header = () => {
 	return (
@@ -34,21 +38,8 @@ const Header = () => {
 							justifyContent={"space-between"}
 							marginLeft={-8}
 						>
-							<Box css={userSty}>
-								<Menu>
-									<MenuButton
-										as={Button}
-										rounded={"full"}
-										variant={"link"}
-										cursor={"pointer"}
-										minW={0}
-										marginRight={4}
-									>
-										<Avatar
-											size={"sm"}
-										/>
-									</MenuButton>
-								</Menu>
+							<Box css={userSty} margin="0 8px 0 48px">
+								<Avatar size={"sm"} />
 							</Box>
 							<Box css={userSty}>
 								<Heading as="h5" size="sm">
@@ -68,7 +59,7 @@ const Header = () => {
 							</Box>
 						</Flex>
 					</Flex>
-					<Flex alignItems={"center"} css={searchBarSty}>
+					<Flex alignItems={"center"} css={iconSty}>
 						<Box>
 							<InputGroup>
 								<Input

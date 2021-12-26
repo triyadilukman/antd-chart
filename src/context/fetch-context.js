@@ -79,6 +79,7 @@ function RDDataProvider({ children }) {
 		const finalRevenue = Object.entries(startDateGrouped).map(([k, v]) => ({
 			Day: `${dayjs(k).format("ddd")}, ${dayjs(k).format("D MMM")}`,
 			Revenue: sumBy(v, "conversion_revenue"),
+			Date: k,
 		}));
 
 		// Calculate Percentage

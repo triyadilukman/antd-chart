@@ -5,11 +5,15 @@ export const logo = css`
 	background: url(${logoPng});
 	width: 135px;
 	height: 30px;
-	background-size: 60%;
+	background-size: 80%;
 	background-repeat: no-repeat;
+	@media (max-width: 768px) {
+		background-size: 50%;
+	}
 `;
 
 export const user = css`
+	cursor: pointer;
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -24,5 +28,7 @@ export const userMobile = css`
 	}
 `
 
-export const searchBar = css`
+export const icon = css`
+	font-size: 22px;
+	cursor: pointer;
 `
